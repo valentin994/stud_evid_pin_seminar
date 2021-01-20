@@ -1,0 +1,17 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1>Evidencija Predmeta</h1>
+    <p>
+        Broj Studenata:
+    @ViewBag.ListLength
+    </p>
+    <ul>
+        @foreach (var student in ViewBag.Studenti)
+        {
+            <li>@student.Ime</li>
+        }
+    </ul>
+</div>
