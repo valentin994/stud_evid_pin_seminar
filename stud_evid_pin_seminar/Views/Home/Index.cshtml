@@ -11,7 +11,15 @@
     <ul>
         @foreach (var student in ViewBag.Studenti)
         {
-            <li>@student.Ime</li>
+            <li>Ime: @student.Ime Prezime: @student.Prezime Broj Dolazaka: @student.BrojDolazaka</li>
+if (student.BrojDolazaka < 8)
+            {
+                @: Potpis: Ne
+            }
+            else
+            {
+                @: Potpis: Da
+            }
         }
     </ul>
 </div>
